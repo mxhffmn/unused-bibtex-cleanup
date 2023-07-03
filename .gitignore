@@ -1,3 +1,3 @@
 /test/resources/testbib_output.bib
-venv
-/test/.pytest_cache/
+/venv/
+/.pytest_cache/
