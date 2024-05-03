@@ -16,7 +16,7 @@ def get_citations_from_file(file_path: str) -> Set[str]:
     """
     citations = set()
 
-    regex = '\\\\(?:cite|citet|citet\\*|citep\\*|citep|citeauthor|citeyear)(?:\\[.*?\\])*{(.+?)}'
+    regex = '\\\\(?:cite|citet|citet\\*|citep\\*|citep|fullcite|citeauthor|citeyear)(?:\\[.*?\\])*{(.+?)}'
 
     # load content of file
     file_content = ''
