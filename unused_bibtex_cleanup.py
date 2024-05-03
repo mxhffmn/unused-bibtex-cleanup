@@ -123,14 +123,14 @@ def write_new_bibtex_file(all_citations: Set[str], bib_file_path: str, no_commen
     :param export_file_path: a separate export file path (for testing purposes)
     """
     # load the bibtex file
-    bib_file = bibtex.Parser().parse_file(bib_file_path)
+    bib_file = bibtex.Parser(encoding='utf-8').parse_file(bib_file_path)
 
     # iterate through all files and print the used ones as they are and the unused ones as a comment
     if not dry_run:
         if not export_file_path:
-            f = open(bib_file_path, 'w')
+            f = open(bib_file_path, 'w', encoding='utf-8')
         else:
-            f = open(export_file_path, 'w')
+            f = open(export_file_path, 'w', encoding='utf-8')
         f.write('%%%%%%%%%%%%%%%%%%%%%%%\n')
         f.write('%%% MODIFIED BIBTEX %%%\n')
         f.write('%%%%%%%%%%%%%%%%%%%%%%%\n')
